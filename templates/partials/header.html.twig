@@ -8,9 +8,22 @@
 
     // Mobile menu toggle
     if (mobileMenuButton && mobileMenu) {
+        console.log('Mobile menu elements found'); // Debug log
         mobileMenuButton.addEventListener('click', function() {
-            mobileMenu.classList.toggle('hidden');
+            console.log('Mobile menu button clicked'); // Debug log
+            console.log('Current mobile menu class:', mobileMenu.className); // Debug log
+            
+            // Toggle visibility using display property
+            if (mobileMenu.style.display === 'none' || mobileMenu.style.display === '') {
+                mobileMenu.style.display = 'block';
+            } else {
+                mobileMenu.style.display = 'none';
+            }
+            
+            console.log('New mobile menu display:', mobileMenu.style.display); // Debug log
         });
+    } else {
+        console.log('Mobile menu elements not found'); // Debug log
     }
 
     // Image modal functionality
@@ -97,8 +110,8 @@
         </div>
 
         <!-- Mobile menu -->
-        <div class="hidden md:hidden" id="mobile-menu">
-            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+        <div class="w-full md:hidden" id="mobile-menu" style="display: none;">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-primary-900">
                 <a href="{{path('app_home')}}" class="text-VertSaugePale hover:text-VertSauge block px-3 py-2 text-base font-bold text-center">Accueil</a>
                 <a href="{{path('app_plants')}}" class="text-VertSaugePale hover:text-VertSauge block px-3 py-2 text-base font-bold text-center">Nos plantes</a>
                 <a href="{{path('app_conseil')}}" class="text-VertSaugePale hover:text-VertSauge block px-3 py-2 text-base font-bold text-center">Conseils</a>
