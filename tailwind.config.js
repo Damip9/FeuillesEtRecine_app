@@ -17,7 +17,9 @@ module.exports = {
     extend: {
       colors: {
         'primary': '#FAF8F3',
-        'VertSauge': '#7D9774',
+        'secondary': '#D2D0A0',
+        'VertSauge': '#537D5D',
+        'VertSaugePale': '#73946B',
         'BrunTerre':'#5C3D2E',
         'TexteGris':'#4F4F4F',       
       },

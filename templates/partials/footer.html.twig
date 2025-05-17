@@ -1,0 +1,64 @@
+<!-- Footer -->
+<footer class="bg-primary text-VertSauge py-8 mt-20">
+    <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Company Info -->
+            <div class="space-y-4">
+                <h5 class="text-xl font-semibold">Feuilles & Racines</h5>
+                <p class="text-TexteGris">Apporter la nature chez vous.</p>
+            </div>
+            
+            <!-- Quick Links -->
+            <div class="space-y-4">
+                <h5 class="text-xl font-semibold">Liens Rapides</h5>
+                <ul class="space-y-2">
+                    <li><a href="{{ path('app_home') }}" class="text-TexteGris hover:text-TexteGris/80 transition-colors">Accueil</a></li>
+                    <li><a href="#" class="text-TexteGris hover:text-TexteGris/80 transition-colors">Services</a></li>
+                    <li><a href="#" class="text-TexteGris hover:text-TexteGris/80 transition-colors">Contact</a></li>
+                </ul>
+            </div>
+            
+            <!-- Contact Info -->
+            <div class="space-y-4">
+                <h5 class="text-xl font-semibold">Contact</h5>
+                <ul class="space-y-2 text-TexteGris">
+                    <li class="flex items-center space-x-2">
+                        <i class="fas fa-phone"></i>
+                        <span>+33 1 23 45 67 89</span>
+                    </li>
+                    <li class="flex items-center space-x-2">
+                        <i class="fas fa-envelope"></i>
+                        <span>contact@feuillesetracines.fr</span>
+                    </li>
+                    <li class="flex items-center space-x-2">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>123 Rue du Jardin, 75000 Paris</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Social Media & Copyright -->
+        <div class="mt-8 pt-8 border-t border-gray-700">
+            <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+                <div class="flex space-x-6">
+                    <a href="#" class="text-TexteGris hover:text-TexteGris/80 transition-colors">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="text-TexteGris hover:text-TexteGris/80 transition-colors">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="text-TexteGris hover:text-TexteGris/80 transition-colors">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="text-TexteGris hover:text-TexteGris/80 transition-colors">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+                <div class="text-TexteGris">
+                    &copy; {{ "now"|date("Y") }} Feuilles & Racines. Tous droits réservés.
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
