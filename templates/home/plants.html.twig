@@ -1,0 +1,261 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nos plantes{% endblock %}
+
+{% block body %}
+<div class="container mx-auto px-4 py-8">
+    <!-- Header Section -->
+    <div class="text-center mb-12">
+        <h1 class="text-4xl text-VertSauge font-bold mb-4">Nos Plantes</h1>
+        <p class="text-gray-600 max-w-2xl mx-auto">Découvrez notre collection de plantes d'intérieur et d'extérieur, soigneusement sélectionnées pour embellir votre espace de vie.</p>
+    </div>
+
+    <!-- Search and Filter Section -->
+    <div class="mb-8 bg-white rounded-lg shadow-md p-4">
+        <div class="flex flex-col md:flex-row gap-4 items-center justify-between">
+            <!-- Search Bar -->
+            <div class="w-full md:w-1/3">
+                <div class="relative">
+                    <input type="text" 
+                           placeholder="Rechercher une plante..." 
+                           class="w-full pl-10 pr-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:border-VertSauge">
+                    <i class="fas fa-search absolute left-3 top-3 text-gray-400"></i>
+                </div>
+            </div>
+
+            <!-- Categories -->
+            <div class="flex flex-wrap gap-2">
+                <button class="px-4 py-2 rounded-full bg-VertSauge text-white hover:bg-VertSauge/80 transition-colors">
+                    Toutes
+                </button>
+                <button class="px-4 py-2 rounded-full bg-gray-100 text-gray-700 hover:bg-gray-200 transition-colors">
+                    Intérieur
+                </button>
+                <button class="px-4 py-2 rounded-full bg-gray-100 text-gray-700 hover:bg-gray-200 transition-colors">
+                    Extérieur
+                </button>
+                <button class="px-4 py-2 rounded-full bg-gray-100 text-gray-700 hover:bg-gray-200 transition-colors">
+                    Succulentes
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Plants Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Large Featured Plant -->
+        <div class="md:col-span-2 lg:col-span-2 row-span-2">
+            <div class="relative group overflow-hidden rounded-xl shadow-lg">
+                <img src="{{ asset('/image/plante-1.jpg') }}" 
+                     alt="Monstera Deliciosa" 
+                     class="w-full h-[400px] object-cover transition-transform duration-300 group-hover:scale-105">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent">
+                    <div class="absolute bottom-0 p-6 text-white">
+                        <span class="bg-VertSauge text-white px-3 py-1 rounded-full text-sm mb-2 inline-block">Plante du mois</span>
+                        <h3 class="text-2xl font-semibold">Monstera Deliciosa</h3>
+                        <p class="text-sm mt-2 opacity-90">Une plante tropicale élégante parfaite pour votre intérieur</p>
+                        <div class="mt-4 flex items-center gap-4">
+                            <span class="flex items-center gap-1">
+                                <i class="fas fa-sun text-yellow-400"></i>
+                                <span class="text-sm">Lumière modérée</span>
+                            </span>
+                            <span class="flex items-center gap-1">
+                                <i class="fas fa-tint text-blue-400"></i>
+                                <span class="text-sm">Arrosage hebdomadaire</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Medium Plants -->
+        <div class="relative group overflow-hidden rounded-xl shadow-lg">
+            <img src="{{ asset('/image/plante-2.jpg') }}" 
+                 alt="Succulente" 
+                 class="w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-105">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
+                <div class="absolute bottom-0 p-4 text-white">
+                    <span class="bg-VertSauge text-white px-2 py-0.5 rounded-full text-xs mb-2 inline-block">Facile d'entretien</span>
+                    <h3 class="text-xl font-semibold">Succulente</h3>
+                    <p class="text-sm mt-1 opacity-90">Parfaite pour les débutants</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="relative group overflow-hidden rounded-xl shadow-lg">
+            <img src="{{ asset('/image/plante-3.jpg') }}" 
+                 alt="Cactus" 
+                 class="w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-105">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
+                <div class="absolute bottom-0 p-4 text-white">
+                    <span class="bg-VertSauge text-white px-2 py-0.5 rounded-full text-xs mb-2 inline-block">Résistant</span>
+                    <h3 class="text-xl font-semibold">Cactus</h3>
+                    <p class="text-sm mt-1 opacity-90">Idéal pour les espaces ensoleillés</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Small Plants -->
+        <div class="relative group overflow-hidden rounded-xl shadow-lg">
+            <img src="{{ asset('/image/plante-4.jpg') }}" 
+                 alt="Fougère" 
+                 class="w-full h-[200px] object-cover transition-transform duration-300 group-hover:scale-105">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
+                <div class="absolute bottom-0 p-4 text-white">
+                    <span class="bg-VertSauge text-white px-2 py-0.5 rounded-full text-xs mb-2 inline-block">Ombre</span>
+                    <h3 class="text-xl font-semibold">Fougère</h3>
+                    <p class="text-sm mt-1 opacity-90">Plante d'ombre idéale</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="relative group overflow-hidden rounded-lg">
+            <img src="{{ asset('/image/plante-5.jpg') }}" 
+                 alt="Orchidée" 
+                 class="w-full h-[200px] object-cover transition-transform duration-300 group-hover:scale-105">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
+                <div class="absolute bottom-0 p-4 text-white">
+                    <h3 class="text-xl font-semibold">Orchidée</h3>
+                    <p class="text-sm mt-1">Élégante et raffinée</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Additional Plants -->
+        <div class="relative group overflow-hidden rounded-lg">
+            <img src="{{ asset('/image/plante-6.jpg') }}" 
+                 alt="Aloe Vera" 
+                 class="w-full h-[200px] object-cover transition-transform duration-300 group-hover:scale-105">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
+                <div class="absolute bottom-0 p-4 text-white">
+                    <h3 class="text-xl font-semibold">Aloe Vera</h3>
+                    <p class="text-sm mt-1">Plante médicinale</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="relative group overflow-hidden rounded-lg">
+            <img src="{{ asset('/image/plante-7.jpg') }}" 
+                 alt="Pothos" 
+                 class="w-full h-[200px] object-cover transition-transform duration-300 group-hover:scale-105">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
+                <div class="absolute bottom-0 p-4 text-white">
+                    <h3 class="text-xl font-semibold">Pothos</h3>
+                    <p class="text-sm mt-1">Plante grimpante</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="relative group overflow-hidden rounded-lg">
+            <img src="{{ asset('/image/plante-1.jpg') }}" 
+                 alt="Calathea" 
+                 class="w-full h-[200px] object-cover transition-transform duration-300 group-hover:scale-105">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
+                <div class="absolute bottom-0 p-4 text-white">
+                    <h3 class="text-xl font-semibold">Calathea</h3>
+                    <p class="text-sm mt-1">Feuilles décoratives</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="relative group overflow-hidden rounded-lg">
+            <img src="{{ asset('/image/plante-8.jpg') }}" 
+                 alt="Ficus" 
+                 class="w-full h-[200px] object-cover transition-transform duration-300 group-hover:scale-105">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
+                <div class="absolute bottom-0 p-4 text-white">
+                    <h3 class="text-xl font-semibold">Ficus</h3>
+                    <p class="text-sm mt-1">Arbre d'intérieur</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="relative group overflow-hidden rounded-lg">
+            <img src="{{ asset('/image/plante-9.jpg') }}" 
+                 alt="Sansevieria" 
+                 class="w-full h-[200px] object-cover transition-transform duration-300 group-hover:scale-105">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
+                <div class="absolute bottom-0 p-4 text-white">
+                    <h3 class="text-xl font-semibold">Sansevieria</h3>
+                    <p class="text-sm mt-1">Plante dépolluante</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="relative group overflow-hidden rounded-lg">
+            <img src="{{ asset('/image/plante-10.jpg') }}" 
+                 alt="Philodendron" 
+                 class="w-full h-[200px] object-cover transition-transform duration-300 group-hover:scale-105">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
+                <div class="absolute bottom-0 p-4 text-white">
+                    <h3 class="text-xl font-semibold">Philodendron</h3>
+                    <p class="text-sm mt-1">Plante tropicale</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="relative group overflow-hidden rounded-lg">
+            <img src="{{ asset('/image/plante-11.jpg') }}" 
+                 alt="Zamioculcas" 
+                 class="w-full h-[200px] object-cover transition-transform duration-300 group-hover:scale-105">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
+                <div class="absolute bottom-0 p-4 text-white">
+                    <h3 class="text-xl font-semibold">Zamioculcas</h3>
+                    <p class="text-sm mt-1">Plante robuste</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="relative group overflow-hidden rounded-lg">
+            <img src="{{ asset('/image/plante-12.jpg') }}" 
+                 alt="Spathiphyllum" 
+                 class="w-full h-[200px] object-cover transition-transform duration-300 group-hover:scale-105">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
+                <div class="absolute bottom-0 p-4 text-white">
+                    <h3 class="text-xl font-semibold">Spathiphyllum</h3>
+                    <p class="text-sm mt-1">Fleur de lune</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="relative group overflow-hidden rounded-lg">
+            <img src="{{ asset('/image/plante-13.jpg') }}" 
+                 alt="Dracaena" 
+                 class="w-full h-[200px] object-cover transition-transform duration-300 group-hover:scale-105">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
+                <div class="absolute bottom-0 p-4 text-white">
+                    <h3 class="text-xl font-semibold">Dracaena</h3>
+                    <p class="text-sm mt-1">Plante purificatrice</p>
+                </div>
+            </div>
+        </div>
+        <div class="relative group overflow-hidden rounded-lg">
+            <img src="{{ asset('/image/plante-14.jpg') }}" 
+                 alt="Dracaena" 
+                 class="w-full h-[200px] object-cover transition-transform duration-300 group-hover:scale-105">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
+                <div class="absolute bottom-0 p-4 text-white">
+                    <h3 class="text-xl font-semibold">Pothos</h3>
+                    <p class="text-sm mt-1">Plante grimpante</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pagination -->
+    <div class="mt-12 flex justify-center gap-2">
+        <button class="px-4 py-2 rounded-lg bg-VertSauge text-white hover:bg-VertSauge/80 transition-colors">
+            <i class="fas fa-chevron-left mr-2"></i>Précédent
+        </button>
+        <button class="px-4 py-2 rounded-lg bg-gray-100 text-gray-700 hover:bg-gray-200 transition-colors">1</button>
+        <button class="px-4 py-2 rounded-lg bg-VertSauge text-white">2</button>
+        <button class="px-4 py-2 rounded-lg bg-gray-100 text-gray-700 hover:bg-gray-200 transition-colors">3</button>
+        <button class="px-4 py-2 rounded-lg bg-VertSauge text-white hover:bg-VertSauge/80 transition-colors">
+            Suivant<i class="fas fa-chevron-right ml-2"></i>
+        </button>
+    </div>
+</div>
+{% endblock %}
+
+
